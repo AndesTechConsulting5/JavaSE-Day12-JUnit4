@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.*;
 
@@ -102,7 +103,7 @@ public class ParameterSummaTest {
       //  File f = new File("src/test/resources/data1.txt");
 
         try {
-            List<String> rawList = Files.readAllLines(Paths.get("src/test/resources/data1.txt"), Charset.defaultCharset());
+            List<String> rawList = Files.readAllLines(Paths.get("src/test/resources/data1.txt"), StandardCharsets.UTF_8);
             System.out.println(rawList);
         }
         catch (IOException ex){ex.printStackTrace();}
